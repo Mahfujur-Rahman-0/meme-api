@@ -11,7 +11,7 @@ let getMeme = ()=>{
     let randomSubreddits = subreddits[Math.floor(Math.random()*subreddits.length)];
     
     fetch(url + randomSubreddits)
-    .then(resp => resp.json())
+    .then(resp => resp.json());
     .then((data) => {
         let memeImg = new Image();
         memeImg.onload = ()=>{
