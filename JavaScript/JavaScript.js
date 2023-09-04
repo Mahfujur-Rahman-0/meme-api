@@ -8,9 +8,9 @@ let url = "https://meme-api.com/gimme/";
 let subreddits = ["catmemes","wholesomes","dogmemes","me_irl"];
 
 let getMeme = ()=>{
-    let randomSubreddits = subreddits[Math.floor(Math.random()*subreddits.length)];
+    let randomSubreddit = subreddits[Math.floor(Math.random()*subreddits.length)];
     
-    fetch(url + randomSubreddits)
+    fetch(url + randomSubreddit)
     .then(resp => resp.json())
     .then((data) => {
         let memeImg = new Image();
